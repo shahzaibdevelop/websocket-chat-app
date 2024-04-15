@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+    .welcome-container{
+      width: 100%;
+      text-align: center;
+      font-weight: 800;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.5em;
+      padding-top: 30px;
+    }
+    button{
+      padding: 13px 30px;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+    button:hover{
+      transform: scale(1.1);
+    }
+    body{
+      background-color: #252525;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-container">Welcome create a room below !</div>
+    <button onclick="createRoom()">Create Room</button>
+  </div>
+  <script>
+    function createRoom(){
+      const randomNumber = Math.floor(Math.random(11111111,99999999) * 100000000);
+      window.location.href = "/chat?" + randomNumber;
+    }
+  </script>
+</body>
+</html>
